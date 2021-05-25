@@ -1,38 +1,117 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+}
+
+.reqHalf{
+  background-color: rgba(17, 15, 22, 0.911);
+  height: 100%;
+  box-shadow: 1px 1px 20px 5px rgb(0, 0, 0);
+  width: 100%;
+  z-index: 100;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.title-searchBar{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+  font-size: 1.75rem;
+  color: azure;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchBar-button{
+  height: 3rem;
+  border: 1px solid blanchedalmond;
+  border-radius: 5px;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.searchBar{
+  height: 100%;
+  border: 0px solid blanchedalmond;
+  padding: .0rem 3rem;
+  /* padding-left: 3rem; */
+  font-size: 2rem;
+  width: 10rem;
+}
+
+.searchBar-button .button{
+  height: 100%;
+  border: 0px solid blanchedalmond;
+  background-color: rgb(46, 204, 113);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+}
+.searchBar-button .button:hover{
+  background-color: rgba(46, 204, 112, 0.644);
+}
+
+.loadingResult{
+  position: absolute;
+}
+
+.resHalf{
+  background-color: rgba(182, 170, 170, 0.123);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.resCard{
+  height: 70%;
+  width: 70%;
+  border: 1px rgba(255, 235, 205, 0) solid;
+  border-radius: 20px;
+  background-color: rgba(58, 63, 77, 0.877);
+  box-shadow: 1px 1px 15px rgb(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.headBar{
+  position: absolute;
   color: white;
+  top: 0rem;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: rgb(58, 63, 77);
+  border-bottom: rgba(36, 39, 48, 0.39) 2px solid;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
